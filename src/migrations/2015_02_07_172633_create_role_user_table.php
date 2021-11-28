@@ -41,11 +41,6 @@ class CreateRoleUserTable extends Migration
                 ->references('id')
                 ->on($this->prefix . 'roles')
                 ->onDelete('cascade');
-
-            $table->foreign('user_id')
-                ->references('id')
-                ->on($this->prefix . Config::usersTableName())
-                ->onDelete('cascade');
         });
     }
 
